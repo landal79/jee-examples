@@ -23,4 +23,7 @@
 		</plugins>
 	</build>
 
+	<modules>
+		<module>mail-examples</module>
+	</modules>
 </project>
