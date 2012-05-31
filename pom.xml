@@ -24,6 +24,7 @@
 	</build>
 
 	<modules>
-		<module>mail-examples</module>
+		<module>mail-examples</module>	
+		<module>jaxb-examples</module>
 	</modules>
 </project>

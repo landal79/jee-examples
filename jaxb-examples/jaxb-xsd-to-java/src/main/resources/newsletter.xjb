@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jaxb:bindings version="2.0" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<jaxb:bindings schemaLocation="newsletter.xsd">
+		<jaxb:bindings node="//xs:complexType[@name='NewsletterType']">
+			<jaxb:class name="Newsletter">
+				<jaxb:javadoc>
+<![CDATA[First line of documentation for a <b>Newsletter</b>.]]>
+				</jaxb:javadoc>
+			</jaxb:class>
+		</jaxb:bindings>
+	</jaxb:bindings>
+</jaxb:bindings>
