@@ -11,5 +11,7 @@
   <packaging>pom</packaging>
   <modules>
   	<module>jaxb-xsd-to-java</module>
+  	<module>jaxb-java-to-xsd</module>
+  	<module>jaxb-java-api</module>
   </modules>
 </project>

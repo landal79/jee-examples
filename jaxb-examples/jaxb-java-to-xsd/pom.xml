@@ -1,0 +1,89 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>jaxb-examples</artifactId>
+		<groupId>org.landal.jee.jaxb</groupId>
+		<version>1.0.0-SNAPSHOT</version>
+		<relativePath>..</relativePath>
+	</parent>
+	<artifactId>jaxb-java-to-xsd</artifactId>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.sun.tools.jxc.maven2</groupId>
+				<artifactId>maven-jaxb-schemagen-plugin</artifactId>
+				<version>1.2</version>
+				<executions>
+					<execution>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<project>
+						${project}
+					</project>
+					<destdir>${project.build.directory}/schemas</destdir>
+					<srcdir>${project.build.sourceDirectory}</srcdir>
+					<schemas>
+						<schema>
+							<namespace>http://landal.org/orders/1.0.0</namespace>
+							<file>order-v1_0_0.xsd</file>
+						</schema>
+					</schemas>
+					<verbose>true</verbose>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>javax.xml.bind</groupId>
+						<artifactId>jaxb-api</artifactId>
+						<version>2.2</version>
+					</dependency>
+					<dependency>
+						<groupId>com.sun.xml.bind</groupId>
+						<artifactId>jaxb-xjc</artifactId>
+						<version>2.2</version>
+					</dependency>
+					<dependency>
+						<groupId>com.sun.xml.bind</groupId>
+						<artifactId>jaxb-impl</artifactId>
+						<version>2.2</version>
+					</dependency>
+					<dependency>
+						<groupId>com.sun.xml.bind</groupId>
+						<artifactId>jaxb-xjc</artifactId>
+						<version>2.2</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+		</plugins>
+	</build>
+
+	<!-- <build> -->
+	<!-- <plugins> -->
+	<!-- <plugin> -->
+	<!-- <groupId>org.codehaus.mojo</groupId> -->
+	<!-- <artifactId>jaxb2-maven-plugin</artifactId> -->
+	<!-- <version>1.3.1</version> -->
+	<!-- <executions> -->
+	<!-- <execution> -->
+	<!-- <id>schemagen</id> -->
+	<!-- <goals> -->
+	<!-- <goal>schemagen</goal> -->
+	<!-- </goals> -->
+	<!-- </execution> -->
+	<!-- </executions> -->
+	<!-- <configuration> -->
+	<!-- <includes> -->
+	<!-- <include>**/*.java</include> -->
+	<!-- </includes> -->
+	<!-- <outputDirectory>${project.build.directory}/schemas</outputDirectory> -->
+	<!-- </configuration> -->
+	<!-- </plugin> -->
+	<!-- </plugins> -->
+	<!-- </build> -->
+</project>
