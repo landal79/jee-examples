@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:order xmlns:ns2="http://landal.org/orders/1.0.0">
+    <id>1</id>
+    <orderDate>01-06-2012</orderDate>
+    <customer>
+        <age>29</age>
+        <id>100</id>
+        <name>alex</name>
+    </customer>
+    <notes>notes</notes>
+    <items>
+        <product>product1</product>
+    </items>
+    <items>
+        <product>product2</product>
+    </items>
+</ns2:order>

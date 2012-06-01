@@ -13,5 +13,6 @@
   	<module>jaxb-xsd-to-java</module>
   	<module>jaxb-java-to-xsd</module>
   	<module>jaxb-java-api</module>
+  	<module>jaxb-custom-date-format</module>
   </modules>
 </project>
