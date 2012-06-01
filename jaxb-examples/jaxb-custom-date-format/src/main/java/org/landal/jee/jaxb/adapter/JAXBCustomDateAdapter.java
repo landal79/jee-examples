@@ -1,11 +1,11 @@
-package org.landal.jee.jaxb.serializer;
+package org.landal.jee.jaxb.adapter;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javax.xml.bind.annotation.adapters.XmlAdapter;
 
-public class JAXBCustomDateSerializer extends XmlAdapter<String, Date> {
+public class JAXBCustomDateAdapter extends XmlAdapter<String, Date> {
 
 	private static final String DATE_FORMAT = "dd-MM-yyyy";
 

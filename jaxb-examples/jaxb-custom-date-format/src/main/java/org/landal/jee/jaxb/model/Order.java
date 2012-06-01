@@ -12,7 +12,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 import org.apache.commons.lang.builder.ToStringBuilder;
 import org.apache.commons.lang.builder.ToStringStyle;
-import org.landal.jee.jaxb.serializer.JAXBCustomDateSerializer;
+import org.landal.jee.jaxb.adapter.JAXBCustomDateAdapter;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "order")
@@ -22,7 +22,7 @@ public class Order implements Serializable {
 
 	private Long id;
 
-	@XmlJavaTypeAdapter(JAXBCustomDateSerializer.class)
+	@XmlJavaTypeAdapter(JAXBCustomDateAdapter.class)
 	private Date orderDate;
 
 	private Customer customer;
