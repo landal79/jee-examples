@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:Q1="xs">
+
+	<xs:annotation>
+	</xs:annotation>
+
+	<xs:element name="webwriter_newsletter" type="NewsletterType" />
+
+	<xs:element name="comment" type="xs:string" />
+
+	<xs:complexType name="NewsletterType">
+		<xs:sequence>
+			<xs:element ref="comment" minOccurs="0" />
+			<xs:element name="header" type="HeaderType" />
+			<xs:element name="section1" type="SectionType" />
+			<xs:element name="section2" type="SectionType" />
+			<xs:element name="section3" type="SectionType" />
+			<xs:element name="section4" type="SectionType" />
+		</xs:sequence>
+		<xs:attribute name="volume" type="xs:positiveInteger" />
+		<xs:attribute name="number" type="xs:positiveInteger" />
+	</xs:complexType>
+
+	<xs:complexType name="HeaderType">
+		<xs:sequence>
+			<xs:element name="long_title" type="xs:string" />
+			<xs:element name="filename" type="xs:string" />
+			<xs:element name="date" type="xs:date" />
+			<xs:element name="meta_title" type="xs:string" />
+			<xs:element name="meta_description" type="xs:string" />
+			<xs:element name="meta_keywords" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="SectionType">
+		<xs:sequence>
+			<!-- every section must have a title -->
+			<xs:element name="title" type="xs:string" minOccurs="1" />
+			<xs:element name="linktitle1" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="url1" type="xs:anyURI" minOccurs="0" />
+			<!-- every section must have an annotation -->
+			<xs:element name="annotation1" type="xs:string"
+				minOccurs="1" />
+			<xs:element name="toc1" type="xs:boolean" minOccurs="0" />
+
+			<!-- there can be up to 4 links, URLs, and TOC entries per section -->
+			<xs:element name="linktitle2" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="url2" type="xs:anyURI" minOccurs="0" />
+			<xs:element name="annotation2" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="toc2" type="xs:boolean" minOccurs="0" />
+
+			<xs:element name="linktitle3" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="url3" type="xs:anyURI" minOccurs="0" />
+			<xs:element name="annotation3" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="toc3" type="xs:boolean" minOccurs="0" />
+
+			<xs:element name="linktitle4" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="url4" type="xs:anyURI" minOccurs="0" />
+			<xs:element name="annotation4" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="toc4" type="xs:boolean" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema> 
