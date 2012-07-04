@@ -48,5 +48,6 @@
 	<modules>
 		<module>mail-examples</module>
 		<module>jaxb-examples</module>
+		<module>jaxws-examples</module>
 	</modules>
 </project>
